@@ -7,8 +7,8 @@
     "start": "node src/index.js",
     "test": "tape tests/**/*.js"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Dan Olita <danielolita1@gmail.com>",
+  "license": "MIT",
   "dependencies": {
     "bluebird": "^3.5.0"
   },
