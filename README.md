@@ -53,3 +53,11 @@ Run tests with:
 ```
 npm test
 ```
+
+## Author
+
+* **Daniel Olita** [danielolita1@gmail.com](danielolita1@gmail.com)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
