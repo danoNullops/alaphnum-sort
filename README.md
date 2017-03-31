@@ -5,27 +5,27 @@ Could be used to sort any string that contains numbers this way.
 
 ## Why
 
-To sort device names like so:
+To sort device names like so:  
 
-switch-t4-r15
-switch-t5-r15
-switch-t9-r1
-switch-t10-r1
-switch-t10-r5
-switch-t11-r1
-switch-t12-r34
-switch-t22-r1
+switch-t4-r15  
+switch-t5-r15  
+switch-t9-r1  
+switch-t10-r1  
+switch-t10-r5  
+switch-t11-r1  
+switch-t12-r34  
+switch-t22-r1  
 
-Instead of:
+Instead of:  
 
-switch-t1-r1
-switch-t10-r1
-switch-t10-r5
-switch-t11-r1
-switch-t12-r34
-switch-t2-r1
-switch-t2-r22
-switch-t22-r1
+switch-t1-r1  
+switch-t10-r1  
+switch-t10-r5  
+switch-t11-r1  
+switch-t12-r34  
+switch-t2-r1  
+switch-t2-r22  
+switch-t22-r1  
 switch-t4-r15
 
 ## Prerequisites
