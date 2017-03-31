@@ -2,21 +2,6 @@
 const test = require('tape');
 const sortAlphaNumeric = require('../src/sort-alphanum');
 
-// function devicesNotArray(devices) {
-//   let typeOfDevices = devices === null ? 'null' : typeof devices;
-//   test('should return empty array if devices is ' + typeOfDevices, function(t) {
-//     const expected = [];
-//     const result = sortAlphaNumeric(devices);
-//
-//     t.same(result, expected);
-//     t.end();
-//   });
-// }
-//
-// const invalidInputs = [ undefined, null, {}, 'device123', true, 10 ];
-//
-// invalidInputs.forEach(devices => devicesNotArray(devices));
-
 test('should return empty array if devices is undefined', function(t) {
   const devices = undefined;
   const expected = [];

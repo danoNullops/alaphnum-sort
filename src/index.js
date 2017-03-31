@@ -1,14 +1,12 @@
 
-// ====================================================
-//  Get devices from file at devices.txt and sort them
-// ====================================================
-
 const Promise = require('bluebird');
 const fs = Promise.promisifyAll(require('fs'));
 const sortAlphaNumeric = require('./sort-alphanum');
 
-// read file asynchronously, fs methods return promises bc
-// fs object had promisifyAll applied to it above
+/**
+ * Get devices from file at devices.txt and sort
+ * them with the sortAlphaNumeric function
+ */
 fs.readFileAsync('devices.txt', 'utf8')
   .then(contents => {
 
