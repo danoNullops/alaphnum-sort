@@ -26,10 +26,15 @@ fs.readFileAsync('devices.txt', 'utf8')
     // sort devices and set to var
     const sortedDevices = sortAlphaNumeric(devices);
 
-    // print unsorted and sorted devices
+    // print unsorted, alpha sort, and alphanumeric sorted devices
     console.log('UNSORTED DEVICES');
     console.log('================');
     devices.forEach(device => console.log(device));
+    console.log('\nDEFAULT ALPHABETIC SORT');
+    console.log('=======================');
+    const devicesAlpha = devices.slice();
+    devicesAlpha.sort();
+    devicesAlpha.forEach(device => console.log(device));
     console.log('\nSORTED DEVICES');
     console.log('==============');
     sortedDevices.forEach(device => console.log(device));

@@ -21,20 +21,27 @@ module.exports = function sortAlphaNumeric(devices) {
   // comparator function
   return devicesCopy.sort((a, b) => {
 
-    // regexasaurus to get all numbers in string
-    const re = new RegExp(/[0-9]+/g);
-
     // only proceed to compare numbers if both
-    // a and b contain numbers
-    if (a.match(re) && b.match(re)) {
+    // a and b contain numbers and either a
+    // or b has a number with 2 or more digits
+    // if both contained single digit numbers
+    // they would sort properly with the default
+    // alphabetic sort
+    if (
+      /\d/.test(a) && /\d/.test(b) &&
+      (/\d{2}/.test(a) || /\d{2}/.test(b))
+    ) {
 
-      // set vars for a and b without numbers
+      // regexasaurus to match all whole numbers in string
+      const re = new RegExp(/\d+/g);
+
+      // a and b without numbers
       const aAlpha = a.replace(re, '');
       const bAlpha = b.replace(re, '');
 
-      // if b >= a without numbers while a > b
-      // or a >= b without numbers while b > a
-      // then the numbers need to be checked
+      // if comparison of a & b with numbers if diff
+      // from a & b without numbers proceed to
+      // compare the numbers
       if (
         (a > b && bAlpha >= aAlpha) ||
         (b > a && aAlpha >= bAlpha)
@@ -57,10 +64,8 @@ module.exports = function sortAlphaNumeric(devices) {
         // index or exit loop, if numbers are unequal,
         // they will be swapped appropriately as needed
         for (let i = 0; i < n; i++) {
-          if (+aNums[i] > +bNums[i]) {
-            return 1;
-          } else if (+bNums[i] > +aNums[i]) {
-            return -1;
+          if (+aNums[i] !== +bNums[i]) {
+            return +aNums[i] > +bNums[i] ? 1 : -1;
           }
         }
       }
